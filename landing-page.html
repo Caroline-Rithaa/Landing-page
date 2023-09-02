@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+	<meta name="viewport" content="width=device-width, initial-scale=0.5">
     <title>Social Media Icons</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>GKK Brands</title>
 	<title>Italic and Bold Text</title>
+	<title>Login and Signup Forms</title>
+	<link rel="stylesheet" href="styles.css">
     <style>
 	    .italic-bold-text {
             font-style: italic;
@@ -35,23 +37,11 @@
             font-family: georgian, Arial;
 			background-color: #FFD700;
         }
-        .textbox-container {
-            text-align: center;
-            margin-top: 5px; 
-        }
-
-        .textbox {
-            width: 200px;
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
         .header {
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 1rem;
+            padding: 5px;
         }
 
         .logo {
@@ -63,13 +53,13 @@
             background-color: inherit;
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 100px;
             padding: 1rem;
         }
 
         .tab {
-            padding: 10px 20px;
-            border-radius: 5px;
+            padding: 1px 10px;
+            border-radius: 10px;
             background-color: inherit;
             color: #333;
             text-decoration: none;
@@ -90,7 +80,7 @@
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 1rem;
+            padding: 10px;
         }
     </style>
 	<meta charset="UTF-8">
@@ -99,8 +89,7 @@
     <style>
         body {
             margin:0px;
-            padding:20px;
-            
+            padding:10px;
             background-size: center;
             background-repeat: no-repeat;
             font-family: georgian, Arial;
@@ -108,6 +97,7 @@
 		</style>
 </head>
 <body>
+    
     <div class="header">
 	    <img src="GKK-Brand.jpg" alt="GKK Brands Logo">
 		<img src="Carol.jpg" alt="Carol">
@@ -120,16 +110,37 @@
         <a href="#" class="tab">Reviews</a>
         <a href="#" class="tab">Contact</a>
     </div>
-
     <div class="content">
-             h2>Caroline Rithaa</h2>
+	         <h2>CAROLINE RITHAA</h2>
         <h2>Freelancer Graphic Designer.</h2>
 		<p class="italic-bold-text">Transforming your vision into stunning desgins.</p>
+     </div>
+     </div>
+	 <!-- Login Form (Embedded on the Page) -->
+    <div class="login-container">
+        <h1>Login</h1>
+        <form class="login-form" action="login.php" method="post">
+            <input type="text" name="username" placeholder="Username">
+            <input type="password" name="password" placeholder="Password">
+            <button type="submit">Login</button>
+        </form>
+        <p class="signup-link">Don't have an account? <a href="#" id="showSignup">Sign up</a></p>
     </div>
-     <div class="textbox-container">
-        <input type="text" class="textbox" placeholder="Click to book a consultation">
+    <!-- Signup Form (Hidden by Default, Shown on Click) -->
+    <div class="signup-popup" id="signupPopup">
+        <div class="popup-content">
+            <h2>Sign Up</h2>
+            <form class="signup-form" action="signup.php" method="post">
+                <input type="text" name="new_username" placeholder="Username">
+                <input type="email" name="email" placeholder="Email">
+                <input type="password" name="new_password" placeholder="Password">
+                <button type="submit">Sign Up</button>
+            </form>
+            <span class="close-popup" id="closePopup">&times;</span>
+        </div>
     </div>
-	
+
+    <script src="script.js"></script>
 	 <div class="social-icons">
         <a href="https://www.facebook.com/your-page-link"><i class="fab fa-facebook"></i></a>
         <a href="https://www.instagram.com/your-page-link"><i class="fab fa-instagram"></i></a>
@@ -137,7 +148,6 @@
     </div>
     <div class="footer">
         <p>&copy; 2023 GKK Brands. All rights reserved.</p>
-    </div>
-	
+    
 </body>
 </html>
